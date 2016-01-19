@@ -1,0 +1,215 @@
+body{
+    width: 1024px;
+    margin: auto;
+    padding: 0px;
+    font-size:14px;
+    background: #fff;
+    font-family: Arial,"微软雅黑";
+    position: relative;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+    color: #999;
+}
+.btn{
+    color: #fff;
+    background: #911d22;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 30px;
+    border: none;
+    width: 300px;
+    cursor: pointer;
+    font-family: Arial,"微软雅黑";
+    display: inline-block;
+}
+.close{
+    background: url(../../images/app/close.gif) no-repeat;
+    position: absolute;
+    right:20px;
+    top:10px;
+    width: 37px;
+    height: 39px;
+    display: block;
+    font-size: 0px;
+}
+.header{
+    background: url(../../images/app/header.gif) no-repeat;
+    font-size:0px;
+    height: 134px;
+}
+.main{
+    position: relative;
+}
+.main .mLeft{
+    position: absolute;
+    width: 200px;
+    left:0px;
+    top:0px;
+    bottom: 0px;
+}
+.main .mRight{
+    margin-left: 200px;
+    background: url(../../images/app/bgV.gif) 0px top repeat-y;
+}
+.main .mRight .titleContainer{
+    color:#911d22;
+    padding:40px 0px 40px 120px;
+    background: url(../../images/app/bgH.gif) left bottom repeat-x;
+}
+.main .mRight .titleContainer .title{
+    font-size:24px;
+    margin: 0px;
+}
+
+/****************menu********************/
+.menu{
+    font-size:16px;
+    padding:0px;
+    margin-top: 100px;
+}
+.menu li{
+    text-align: center;
+    margin-bottom:30px;
+}
+.menu a{
+    text-decoration: none;
+    text-align:center;
+}
+.menu a.active,.menu a:hover{
+    color:#911d22;
+}
+/****************************************form*****************************/
+.vForm{
+
+    padding:40px 0px 40px 120px;
+}
+.vForm .row{
+    margin: 15px 0px;
+}
+.vForm .row .label{
+    color: #911d22;
+    line-height: 30px;
+    width: 100px;
+    display: inline-block;
+}
+.vForm .row .input{
+    height: 30px;
+    border-radius: 3px;
+    background: #eee;
+    border: none;
+    width: 300px;
+}
+.vForm .row .submitBtn{
+}
+.vForm .row .links{
+    display: inline-block;
+}
+.vForm .row .links .link{
+    color: #911d22;
+}
+
+/********************************list************************/
+.list{
+    font-size: 0px;
+    text-align: center;
+}
+.list li{
+    width: 136px;
+    margin: 10px;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+}
+.list li a{
+
+}
+.list li a{
+
+}
+.list li .score{
+    color: #fff;
+    border-radius: 3px;
+    background: #911d22;
+    line-height: 20px;
+    text-align: center;
+    width: 100px;
+    margin: 10px auto;
+}
+/**
+*查看作品的两个菜单（用户）
+*/
+.list1{
+    font-size: 0px;
+}
+.list1 li{
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+}
+.list1 li a{
+    font-size: 18px;
+    color: #999;
+}
+.list1 li a.active,.list1 li a:hover{
+    color: #911d22;
+}
+/**
+* 查看作品的两个菜单（专家）
+*/
+.list2{
+    font-size: 0px;
+}
+.list2 li{
+    width: 33%;
+    text-align: center;
+    display: inline-block;
+}
+.list2 li a{
+    font-size: 18px;
+    color: #999;
+}
+.list2 li a.active,.list1 li a:hover{
+    color: #911d22;
+}
+/**
+*table
+*/
+.judgeTable{
+    width: 100%;
+    margin:30px auto 30px auto;
+    color: #666;
+}
+.judgeTable thead{
+    background: #eee;
+}
+.judgeTable tbody tr{
+    line-height: 30px;
+}
+.judgeTable thead tr th{
+    padding: 10px;
+}
+.judgeTable tbody tr th{
+    color: #911d22;
+}
+.judgeTable tbody tr td{
+    padding-left: 5px;
+}
+.judgeTable tbody tr:nth-child(2n){
+    background: #eee;
+}
+/**********************************************************index****************************/
+.goIn{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: block;
+    top:450px;
+    left:650px;
+    font-size:0px;
+}
