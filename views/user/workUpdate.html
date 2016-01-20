@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>专家评估系统</title>
+    <link href="../../css/src/zyup.css" type="text/css" rel="stylesheet">
+    <link href="../../css/src/main.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="../../js/lib/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/juicer-min.js"></script>
+    <script type="text/javascript" src="../../js/lib/plupload.full.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/qiniu.js"></script>
+    <script src="../../js/src/config.js"></script>
+    <script src="../../js/src/Functions.js"></script>
+    <script src="../../js/src/workUpdate.js"></script>
+</head>
+<body>
+<script type="text/template" id="mediaItemTpl">
+    <li class="zyupUnCompleteLi" data-file-id="${fileId}">
+        <span class="zyupMediaFilename">${filename}</span>
+        <span class="zyupPercent">0%</span>
+        <span class="zyupDelete zyupHidden">delete</span>
+    </li>
+</script>
+
+
+<div class="header">头部</div>
+
+<div class="main">
+    <div class="mLeft">
+
+        <script src="menu.js"></script>
+
+    </div>
+    <div class="mRight">
+        <div class="zyupScreen">
+            <div class="zyupTab" id="zyupTab">
+                <ol>
+                    <li><a href="#zyupStep1" class="zyupStep  zyupStepCurrent">1. 填写基本信息</a></li>
+                    <li><a href="#zyupStep2" class="zyupStep ">2. 上传</a></li>
+                    <li><a href="#zyupStep3" class="zyupStep">3. 预览并提交</a></li>
+                </ol>
+            </div>
+
+            <div class="zyupStepPanel zyupStepPanel1 " id="zyupStep1">
+                <div class="zyupField">
+                    <label for="zyupTitleInput">名称</label>
+                    <input type="text"  maxlength="80" class="zyupInputGray"
+                           name="name" id="zyupTitleInput">
+                </div>
+                <div class="zyupField">
+                    <label for="zyupTitleInput">类别</label>
+                    <select class="zyupInputGray">
+                        <option>生活</option>
+                        <option>学习</option>
+                    </select>
+                </div>
+                <div class="zyupField">
+                    <label for="zyupTitleInput">主题</label>
+                    <select class="zyupInputGray">
+                        <option>大湘西民族融合</option>
+                        <option>红色文化</option>
+                    </select>
+                </div>
+                <div class="zyupField">
+                    <label>象征功能</label>
+                    <input type="text"  maxlength="80" class="zyupInputGray"
+                           name="author_txt">
+                </div>
+                <div class="zyupField">
+                    <label>材料</label>
+                    <input type="text"  maxlength="120" class="zyupInputGray"
+                           name="size_txt">
+                </div>
+                <div class="zyupField">
+                    <label>工艺</label>
+                    <input type="text" class="zyupInputGray zyupTagInput " maxlength="64"
+                           name="keyword_tag">
+                </div>
+                <div class="zyupField">
+                    <label>尺寸</label>
+                    <input type="text" class="zyupInputGray zyupTagInput " maxlength="64"
+                           name="keyword_tag">
+                </div>
+                <div class="zyupField">
+                    <label >内容说明</label>
+                    <textarea class="zyupInputGray" name="illustration"
+                              placeholder=""></textarea>
+                </div>
+                <div class="right">
+                    <div class="zyupThumbContainer" id="zyupThumbContainer">
+                        <a href="#" class="zyupButton" id="zyupThumbUploadBtn">上传缩略图</a>
+                        <span class="zyupTip">300x300的jpg或png图像。</span>
+                        <img class="zyupThumb" id="zyupThumb" width="300" height="200"
+                             src="../../images/zyup/zyupDefaultThumb.png"/>
+                        <input type="hidden" value="{{artifact.preview_image}}" name="preview_image" id="zyupThumbUrl">
+                    </div>
+                    <br>
+                    <div id="zyupFileContainer">
+                        <a href="#" class="zyupButton" id="zyupFileUploadBtn">上传附件</a>
+                        <span class="zyupTip">zip文件</span>
+
+                        <br>
+                        <span id="zyupFilename"></span>
+                        <input type="hidden" value="{{artifact.attachment_filename}}" name="attachment_filename" id="zyupFilenameValue">
+                        <input type="hidden" value="{{artifact.attachment_file}}" name="attachment_file" id="zyupFileUrl">
+                    </div>
+                    <div>
+                        <label>设计分析</label>
+                        <textarea class="zyupInputGray" style="min-height: 100px" name="analysis"
+                                  placeholder=""></textarea>
+                    </div>
+                    <div>
+                        <label>设计来源</label>
+                        <textarea class="zyupInputGray" style="min-height: 100px" name="analysis"
+                                  placeholder=""></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- step 2-->
+            <div class="zyupStepPanel zyupStepPanel2 zyupHidden" id="zyupStep2">
+
+                <span class="zyupColumnLeftHeader" id="zyupUploadBtn">添加文件</span>
+
+                <ol id="zyupMediaList" class="zyupMediaList">
+
+                </ol>
+            </div>
+
+            <!-- step 3-->
+            <div class="zyupStepPanel zyupStepPanel3 zyupHidden" id="zyupStep3">
+                <div id="zyupPreview" class="zyupPreview">
+                    <img style="margin:10px auto;display: block;" src="../../data/images/work/detail1.gif">
+                </div>
+                <a href="worksMgr.html" class="btn" style="width: 150px;float: right;margin-bottom: 20px">提交</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script>
+        var pageName="workUpdate";
+        $("#menu a[data-page='"+pageName+"']").addClass("active");
+    </script>
+</body>
+</html>
