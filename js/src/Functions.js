@@ -147,8 +147,8 @@ var Functions=(function(){
         setCookie:function(name,value,days){
             var date = new Date();
             date.setTime(date.getTime()+(days*24*60*60*1000));
-            var thisCookie = name + "=" + encodeURIComponent(value) +
-                ((days) ? "; expires=" + date.toGMTString() : "");
+            var thisCookie = name + "=" + encodeURIComponent(value) +";path=/judge/;"+
+                ((days) ? "expires=" + date.toGMTString() : "");
             document.cookie = thisCookie;
         },
         /**

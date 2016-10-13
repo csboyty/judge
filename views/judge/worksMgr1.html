@@ -15,9 +15,10 @@
     </div>
     <div class="mRight">
         <div class="titleContainer">
-            <ul class="list1">
-                <li><a class="active" href="worksMgr.html">查看作品</a></li>
-                <li><a href="worksMgr1.html">查看评分结果</a></li>
+            <ul class="list2">
+                <li><a  href="worksMgr.html">全部</a></li>
+                <li><a class="active" href="worksMgr1.html">未打分</a></li>
+                <li><a href="worksMgr2.html">已打分</a></li>
             </ul>
         </div>
         <div>
@@ -41,23 +42,14 @@
     var html="";
 
     for(var o in data){
-        if(data[o].score||scores[o]){
-            var score=data[o].score||scores[o];
+        if(!data[o].score&&!scores[o]){
             html+='<li>'+
-                    '<a href="workDetailScored.html#'+o+'"><img src="'+data[o].thumb+'">'+
-                    '<p class="score">'+score+'分</p></a>'+
-                    '</li>';
-        }else{
-            html+='<li>'+
-                    '<a href="workDetail.html#'+o+'"><img src="'+data[o].thumb+'"></a>'+
+                    '<a href="workDetail.html#'+o+'&1"><img src="'+data[o].thumb+'"></a>'+
                     '</li>';
         }
-
     }
 
     $(".list").html(html);
-
 </script>
-
 </body>
 </html>

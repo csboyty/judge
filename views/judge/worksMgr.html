@@ -15,9 +15,10 @@
     </div>
     <div class="mRight">
         <div class="titleContainer">
-            <ul class="list1">
-                <li><a class="active" href="worksMgr.html">查看作品</a></li>
-                <li><a href="worksMgr1.html">查看评分结果</a></li>
+            <ul class="list2">
+                <li><a class="active" href="worksMgr.html">全部</a></li>
+                <li><a href="worksMgr1.html">未打分</a></li>
+                <li><a href="worksMgr2.html">已打分</a></li>
             </ul>
         </div>
         <div>
@@ -34,7 +35,6 @@
 <script>
     var pageName="worksMgr";
     $("#menu a[data-page='"+pageName+"']").addClass("active");
-
     var data=config.data;
     var scores=JSON.parse(Functions.getCookie("scores"));
     scores=scores?scores:{};
@@ -58,6 +58,5 @@
     $(".list").html(html);
 
 </script>
-
 </body>
 </html>

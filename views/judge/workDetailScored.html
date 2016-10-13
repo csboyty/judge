@@ -19,7 +19,8 @@
             <h2 id="title">这厢有礼</h2>
         </div>
         <div>
-            <img id="image" style="margin:10px auto;display: block;" src="../../data/images/work/1/detail1.jpg">
+            <img id="image1" style="margin:10px auto;display: block;" src="../../data/images/work/1/001.jpg">
+            <img id="image2" style="margin:10px auto;display: block;" src="../../data/images/work/1/detail1.jpg">
         </div>
     </div>
 </div>
@@ -34,9 +35,13 @@
     hash=hash.split("&");
     id=hash[0].substring(1);
 
-    $("#title").text(config["data"][id].title);
-    $("#image").attr("src","../../data/images/work/"+id+"/detail"+id+".jpg");
+    $("#title").text(config["data"][id]["title"]);
+    $("#image1").attr("src","../../data/images/work/"+id+"/00"+id+".jpg");
+    $("#image2").attr("src","../../data/images/work/"+id+"/detail"+id+".jpg");
 
+    if(hash.length==2){
+        $(".close").attr("href","worksMgr2.html");
+    }
 </script>
 </body>
 </html>

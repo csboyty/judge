@@ -114,6 +114,31 @@ a{
     color: #911d22;
 }
 
+/**
+* table
+*/
+.table{
+    width: 90%;
+    margin:auto;
+}
+.table tbody tr{
+    line-height: 40px;
+}
+.table tbody tr:nth-child(odd){
+    background: #eee;
+}
+.table tbody tr td:first-child{
+    padding-left: 20px;
+}
+.table tbody tr input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+}
+.table tbody tr input:focus{
+    border: 1px solid #eee;
+    outline: none;
+}
 /********************************list************************/
 .list{
     font-size: 0px;
@@ -131,6 +156,9 @@ a{
 }
 .list li a{
 
+}
+.list li img{
+    width: 100%;
 }
 .list li .score{
     color: #fff;

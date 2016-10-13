@@ -11,27 +11,7 @@ var config={
         bucketDomain:"http://7vilpp.com1.z0.glb.clouddn.com/"
     },
     ajaxUrls:{
-        upload:"http://121.40.16.252/asset_hub/qiniu/uptoken",
-        getAllTags:"tags/list",
-        getAllUsers:"users/list",
-        deleteUser:"users/:userId/delete",
-        getAllPosts:"artifacts/list",
-        getPost:"artifacts/:postId",
-        deletePost:"artifacts/:postId/delete",
-        deleteTag:"tags/:id/delete"
-    },
-    type:{
-        theme:"主题",
-        keyword:"关键词",
-        material:"材料"
-    },
-    role:{
-        "admin":"管理员",
-        "manager":"资料管理员",
-        "user":"用户"
-    },
-    perLoadCount:{
-        table:10
+        upload:"http://121.40.16.252/asset_hub/qiniu/uptoken"
     },
     upload:{
         sizes:{
@@ -77,11 +57,107 @@ var config={
         fileNameTooLong:"文件名过长，最大长度为${value}个字！",
         stepOneUnComplete:"第一步有未填写字段！",
         stepTwoUnComplete:"没有上传文件或者有文件正在上传！"
+    },
+    data:{
+        1:{
+            thumb:"../../data/images/work/1/01.jpg",
+            title:"这湘有礼",
+            score:0
+        },
+        2:{
+            thumb:"../../data/images/work/2/02.jpg",
+            title:"农耕包袋设计",
+            score:0
+        },
+        3:{
+            thumb:"../../data/images/work/3/03.png",
+            title:"四季稻",
+            score:4.23
+        },
+        4:{
+            thumb:"../../data/images/work/4/04.jpg",
+            title:"军人本色-单肩包系列",
+            score:4.4
+        },
+        5:{
+            thumb:"../../data/images/work/5/05.png",
+            title:"湘楚漆器文化桌面文具产品",
+            score:4.25
+        },
+        6:{
+            thumb:"../../data/images/work/6/06.jpg",
+            title:"鹿角便携式餐具套装",
+            score:4.00
+        },
+        7:{
+            thumb:"../../data/images/work/7/07.jpg",
+            title:"岳麓书院剪纸-明信片版",
+            score:4.32
+        },
+        8:{
+            thumb:"../../data/images/work/8/08.jpg",
+            title:"岳麓八景系列产品",
+            score:4.23
+        },
+        9:{
+            thumb:"../../data/images/work/9/09.jpg",
+            title:"岳麓书院时间印记",
+            score:4.25
+        },
+        10:{
+            thumb:"../../data/images/work/10/010.jpg",
+            title:"岳麓书院铭文系列-杯垫",
+            score:4.12
+        },
+        11:{
+            thumb:"../../data/images/work/11/011.jpg",
+            title:"书院文化产品-回形针",
+            score:4.32
+        },
+        12:{
+            thumb:"../../data/images/work/12/012.jpg",
+            title:"蓝.隐山 侗族手工织锦亚麻围巾",
+            score:4.35
+        },
+        13:{
+            thumb:"../../data/images/work/13/013.jpg",
+            title:"花瑶图案设计及应用",
+            score:4.46
+        },
+        14:{
+            thumb:"../../data/images/work/14/014.jpg",
+            title:"花瑶挑花布鞋",
+            score:4.45
+        },
+        15:{
+            thumb:"../../data/images/work/15/015.jpg",
+            title:"金银花茶叶包装",
+            score:4.46
+        },
+        16:{
+            thumb:"../../data/images/work/16/016.jpg",
+            title:"DIY手工织带套装",
+            score:4.49
+        },
+        17:{
+            thumb:"../../data/images/work/17/017.png",
+            title:"竹文化室内照明灯具",
+            score:4.56
+        },
+        18:{
+            thumb:"../../data/images/work/18/018.png",
+            title:"光阴圆舞曲",
+            score:4.35
+        },
+        19:{
+            thumb:"../../data/images/work/19/019.jpg",
+            title:"花与瓷",
+            score:4.50
+        },
+        20:{
+            thumb:"../../data/images/work/20/020.jpg",
+            title:"“桐”（铜+木）实木家具",
+            score:4.57
+        }
     }
 };
-$(document).ready(function(){
-    $("#opt-body").css("minHeight",$("body").height()-140);
-    $("input[type='text'],input[type='email']").blur(function(){
-        $(this).val($(this).val().trim());
-    });
-});

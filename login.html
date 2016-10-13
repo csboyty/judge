@@ -51,11 +51,10 @@
 <script type="text/javascript" src="js/lib/jquery-2.0.3.min.js"></script>
 <script>
     $("#role").change(function(){
-        console.log($(this).val());
         if($(this).val()==1){
             $("#link").attr("href","views/user/worksMgr.html");
         }else{
-            $("#link").attr("href","views/judge/works.html");
+            $("#link").attr("href","views/judge/worksMgr.html");
         }
     });
 </script>

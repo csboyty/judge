@@ -22,27 +22,36 @@
         </div>
         <div>
             <ul class="list">
-                <li>
-                    <a href="workDetail1.html"><img src="../../data/images/work/5.gif">
-                        <p class="score">3.05分</p></a>
-                </li>
-                <li>
-                    <a href="workDetail1.html"><img src="../../data/images/work/4.gif">
-                        <p class="score">2.00分</p></a>
-                </li>
-                <li>
-                    <a href="workDetail1.html"><img src="../../data/images/work/6.gif">
-                        <p class="score">3.85分</p></a>
-                </li>
+
             </ul>
         </div>
     </div>
 </div>
 
 <script type="text/javascript" src="../../js/lib/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="../../js/src/config.js"></script>
+<script type="text/javascript" src="../../js/src/Functions.js"></script>
 <script>
     var pageName="worksMgr";
     $("#menu a[data-page='"+pageName+"']").addClass("active");
+
+    var data=config.data;
+    var scores=JSON.parse(Functions.getCookie("scores"));
+    scores=scores?scores:{};
+    var html="";
+
+    for(var o in data){
+        if(data[o].score||scores[o]){
+            var score=data[o].score||scores[o];
+            html+='<li>'+
+                    '<a href="workDetailScored.html#'+o+'&1"><img src="'+data[o].thumb+'">'+
+                    '<p class="score">'+score+'分</p></a>'+
+                    '</li>';
+        }
+
+    }
+
+    $(".list").html(html);
 </script>
 
 </body>
