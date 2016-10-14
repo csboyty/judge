@@ -35,7 +35,7 @@
     hash=hash.split("&");
     id=hash[0].substring(1);
 
-    $("#title").text(config["data"][id]["title"]);
+    $("#title").text(config["data"][id].title);
     $("#image1").attr("src","../../data/images/work/"+id+"/00"+id+".jpg");
     $("#image2").attr("src","../../data/images/work/"+id+"/detail"+id+".jpg");
 

@@ -72,92 +72,157 @@ var config={
         3:{
             thumb:"../../data/images/work/3/03.png",
             title:"四季稻",
-            score:4.23
+            score:4.35
         },
         4:{
             thumb:"../../data/images/work/4/04.jpg",
             title:"军人本色-单肩包系列",
-            score:4.4
+            score:4.22
         },
         5:{
             thumb:"../../data/images/work/5/05.png",
             title:"湘楚漆器文化桌面文具产品",
-            score:4.25
+            score:3.64
         },
         6:{
             thumb:"../../data/images/work/6/06.jpg",
             title:"鹿角便携式餐具套装",
-            score:4.00
+            score:4.05
         },
         7:{
             thumb:"../../data/images/work/7/07.jpg",
             title:"岳麓书院剪纸-明信片版",
-            score:4.32
+            score:4.38
         },
         8:{
             thumb:"../../data/images/work/8/08.jpg",
             title:"岳麓八景系列产品",
-            score:4.23
+            score:4.40
         },
         9:{
             thumb:"../../data/images/work/9/09.jpg",
             title:"岳麓书院时间印记",
-            score:4.25
+            score:4.28
         },
         10:{
             thumb:"../../data/images/work/10/010.jpg",
             title:"岳麓书院铭文系列-杯垫",
-            score:4.12
+            score:4.26
         },
         11:{
             thumb:"../../data/images/work/11/011.jpg",
             title:"书院文化产品-回形针",
-            score:4.32
+            score:3.59
         },
         12:{
             thumb:"../../data/images/work/12/012.jpg",
             title:"蓝.隐山 侗族手工织锦亚麻围巾",
-            score:4.35
+            score:4.49
         },
         13:{
             thumb:"../../data/images/work/13/013.jpg",
             title:"花瑶图案设计及应用",
-            score:4.46
+            score:4.19
         },
         14:{
             thumb:"../../data/images/work/14/014.jpg",
             title:"花瑶挑花布鞋",
-            score:4.45
+            score:3.99
         },
         15:{
             thumb:"../../data/images/work/15/015.jpg",
             title:"金银花茶叶包装",
-            score:4.46
+            score:3.64
         },
         16:{
             thumb:"../../data/images/work/16/016.jpg",
             title:"DIY手工织带套装",
-            score:4.49
+            score:3.98
         },
         17:{
             thumb:"../../data/images/work/17/017.png",
             title:"竹文化室内照明灯具",
-            score:4.56
+            score:3.78
         },
         18:{
             thumb:"../../data/images/work/18/018.png",
             title:"光阴圆舞曲",
-            score:4.35
+            score:4.10
         },
         19:{
             thumb:"../../data/images/work/19/019.jpg",
             title:"花与瓷",
-            score:4.50
+            score:4.28
         },
         20:{
             thumb:"../../data/images/work/20/020.jpg",
             title:"“桐”（铜+木）实木家具",
-            score:4.57
+            score:4.18
+        },
+        21:{
+            thumb:"../../data/images/work/21/021.jpg",
+            title:"双色迷彩伟人肖像系列",
+            score:3.06
+        },
+        22:{
+            thumb:"../../data/images/work/22/022.jpg",
+            title:"岳麓书院铭文系列-杯垫",
+            score:3.28
+        },
+        23:{
+            thumb:"../../data/images/work/23/023.jpg",
+            title:"基于湖湘漆器文化的桌面文具产品设计",
+            score:3.20
+        },
+        24:{
+            thumb:"../../data/images/work/24/024.jpg",
+            title:"花瑶挑花相机带基本款",
+            score:3.84
+        },
+        25:{
+            thumb:"../../data/images/work/25/025.jpg",
+            title:"花瑶挑花DIY手工织带套装",
+            score:3.95
+        },
+        26:{
+            thumb:"../../data/images/work/26/026.jpg",
+            title:"书院九号总理套餐",
+            score:3.77
+        },
+        27:{
+            thumb:"../../data/images/work/27/027.jpg",
+            title:"鸟衣架",
+            score:3.57
+        },
+        28:{
+            thumb:"../../data/images/work/28/028.jpg",
+            title:"岳麓书院“窗花”系列",
+            score:3.02
+        },
+        29:{
+            thumb:"../../data/images/work/29/029.jpg",
+            title:"垂花柱精油瓶子",
+            score:3.24
+        },
+        30:{
+            thumb:"../../data/images/work/30/030.jpg",
+            title:"电子产品收纳包",
+            score:3.23
+        },
+        31:{
+            thumb:"../../data/images/work/31/031.jpg",
+            title:"岳麓书院厨具系列",
+            score:2.90
+        },
+        32:{
+            thumb:"../../data/images/work/32/032.jpg",
+            title:"踏歌堂纹果盘设计",
+            score:3.81
+        },
+        33:{
+            thumb:"../../data/images/work/33/033.jpg",
+            title:"木踏歌行 侗族手工织锦亚麻围巾",
+            score:4.10
         }
     }
 };
